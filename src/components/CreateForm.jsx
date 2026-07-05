@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export default function CreateForm({ onCreate }) {
+export default function CreateForm({ onCreate, t }) {
   const [url, setUrl] = useState('')
   const [slug, setSlug] = useState('')
   const [busy, setBusy] = useState(false)
@@ -29,20 +29,20 @@ export default function CreateForm({ onCreate }) {
           className="create__url"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
-          placeholder="https://your-long-url.com/goes/here"
+          placeholder={t.urlPlaceholder}
           spellCheck={false}
         />
         <button className="create__btn" type="submit" disabled={busy}>
-          {busy ? 'Shortening…' : 'Shorten'}
+          {busy ? t.shortening : t.shorten}
         </button>
       </div>
       <div className="create__row create__row--slug">
-        <span className="create__slughint">optional custom slug</span>
+        <span className="create__slughint">{t.slugHint}</span>
         <input
           className="create__slug"
           value={slug}
           onChange={(e) => setSlug(e.target.value)}
-          placeholder="my-link"
+          placeholder={t.slugPlaceholder}
           spellCheck={false}
         />
       </div>

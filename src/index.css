@@ -33,7 +33,39 @@ body {
 
 /* Masthead */
 .masthead { margin-bottom: 28px; padding-bottom: 22px; border-bottom: 1px solid var(--border); }
+.mastheadTop { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .brand { display: flex; align-items: center; gap: 10px; }
+
+.langToggle {
+  display: flex;
+  gap: 2px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px;
+  background: var(--surface);
+}
+
+.langToggle__btn {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.langToggle__btn--on {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
+.langToggle__btn:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
 .brand__mark {
   font-family: var(--mono);
   font-weight: 700;
