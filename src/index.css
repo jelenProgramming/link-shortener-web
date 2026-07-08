@@ -1,19 +1,19 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #f6f6f4;
-  --surface: #ffffff;
-  --border: #e2e1dd;
-  --border-strong: #b0afa9;
-  --text: #111110;
-  --muted: #6b6a67;
-  --subtle: #9e9d9a;
-  --accent: #111110;
-  --accent-fg: #ffffff;
-  --ok: #166534;
-  --err: #991b1b;
-  --err-bg: #fef2f2;
-  --err-border: #fecaca;
+  --bg: #0b1120;
+  --surface: #131c2e;
+  --border: #26304a;
+  --border-strong: #3b4666;
+  --text: #e8edf7;
+  --muted: #9aa6c0;
+  --subtle: #6b7896;
+  --accent: #34d399;
+  --accent-fg: #04140e;
+  --ok: #34d399;
+  --err: #f87171;
+  --err-bg: #2a1517;
+  --err-border: #7f1d1d;
   --mono: ui-monospace, 'Cascadia Code', 'Fira Code', Consolas, monospace;
 }
 
@@ -303,3 +303,15 @@ body {
   .stats__cols { grid-template-columns: 1fr; }
   .row__orig { max-width: 160px; }
 }
+
+/* dark dashboard polish, emerald neon glow */
+body { background: radial-gradient(1100px 560px at 88% -12%, rgba(52, 211, 153, 0.1), transparent 60%), var(--bg); }
+.create, .list, .panel { box-shadow: 0 12px 34px rgba(0, 0, 0, 0.4); }
+.brand__mark { box-shadow: 0 0 16px rgba(52, 211, 153, 0.55); }
+.create__btn { box-shadow: 0 6px 18px rgba(52, 211, 153, 0.3); }
+.create__btn:hover:not(:disabled) { background: #4ade9f; border-color: #4ade9f; box-shadow: 0 12px 26px rgba(52, 211, 153, 0.42); }
+.row--active { border-left-color: var(--accent); box-shadow: -2px 0 14px rgba(52, 211, 153, 0.22); }
+.row__clicksnum, .stats__totalnum { color: var(--accent); }
+.chart__bar { background: linear-gradient(180deg, #6ee7b7, #34d399); box-shadow: 0 0 12px rgba(52, 211, 153, 0.4); }
+.chart__col:hover .chart__bar { background: linear-gradient(180deg, #a7f3d0, #34d399); }
+.langToggle { background: rgba(255, 255, 255, 0.04); }
